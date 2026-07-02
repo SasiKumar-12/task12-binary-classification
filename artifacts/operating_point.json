@@ -1,0 +1,55 @@
+{
+  "model": "RandomForestClassifier",
+  "best_params": {
+    "clf__max_depth": null,
+    "clf__min_samples_leaf": 1,
+    "clf__n_estimators": 400
+  },
+  "calibration_used": false,
+  "brier_score_validation": {
+    "raw": 0.0308,
+    "calibrated": 0.0325
+  },
+  "chosen_threshold": 0.15,
+  "cost_assumptions": {
+    "cost_false_negative": 10.0,
+    "cost_false_positive": 1.0
+  },
+  "cv_stability": {
+    "fold_aucs": [
+      0.9991,
+      0.9908,
+      0.9981,
+      0.9767,
+      0.9842
+    ],
+    "mean": 0.9898,
+    "std": 0.0085
+  },
+  "test_performance": {
+    "roc_auc": 0.9947,
+    "f1": 0.8913,
+    "confusion_matrix": {
+      "TP": 41,
+      "FP": 9,
+      "FN": 1,
+      "TN": 63
+    },
+    "expected_false_negative_rate": 0.0238,
+    "expected_false_positive_rate": 0.125
+  },
+  "segment_report": {
+    "small_tumor": {
+      "n": 50,
+      "auc": 1.0,
+      "recall_positive": 1.0,
+      "false_positive_rate": 0.0417
+    },
+    "large_tumor": {
+      "n": 64,
+      "auc": 0.9917,
+      "recall_positive": 0.975,
+      "false_positive_rate": 0.2917
+    }
+  }
+}
